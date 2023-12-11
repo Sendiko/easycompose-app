@@ -37,7 +37,7 @@ fun WelcomeScreen(
                 Image(
                     painter = painterResource(id = R.drawable.login_rectangle),
                     contentDescription = null,
-                    modifier = Modifier.scale(1.2f, 1.2f)
+                    modifier = Modifier.scale(1.5f, 1.5f)
                 )
                 Column(
                     modifier = Modifier.padding(16.dp),

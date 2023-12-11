@@ -42,7 +42,7 @@ fun LoginScreen() {
                     Image(
                         painter = painterResource(id = R.drawable.login_rectangle),
                         contentDescription = null,
-                        modifier = Modifier.scale(1.2f, 1.2f)
+                        modifier = Modifier.scale(1.5f, 1.5f)
                     )
                     Text(
                         text = "Welcome to EasyCompose!",
