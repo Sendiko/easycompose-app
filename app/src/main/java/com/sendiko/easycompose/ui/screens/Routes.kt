@@ -1,4 +1,4 @@
-package com.sendiko.easycompose.screens
+package com.sendiko.easycompose.ui.screens
 
 sealed class Routes(val route: String) {
     object SplashScreenRoute: Routes(route = "splashscreen_route")

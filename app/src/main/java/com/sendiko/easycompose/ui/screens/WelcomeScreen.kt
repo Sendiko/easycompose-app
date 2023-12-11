@@ -1,4 +1,4 @@
-package com.sendiko.easycompose.screens
+package com.sendiko.easycompose.ui.screens
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Box
@@ -45,7 +45,7 @@ fun WelcomeScreen(
                 ) {
                     Text(
                         text = "Welcome to EasyCompose!",
-                        fontSize = 24.sp,
+                        fontSize = 20.sp,
                         fontWeight = FontWeight.Bold
                     )
                     Image(

@@ -1,4 +1,4 @@
-package com.sendiko.easycompose.screens
+package com.sendiko.easycompose.ui.screens
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Box
