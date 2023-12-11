@@ -14,9 +14,10 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import com.sendiko.easycompose.screens.Routes
-import com.sendiko.easycompose.screens.SplashScreen
-import com.sendiko.easycompose.screens.WelcomeScreen
+import com.sendiko.easycompose.ui.screens.LoginScreen
+import com.sendiko.easycompose.ui.screens.Routes
+import com.sendiko.easycompose.ui.screens.SplashScreen
+import com.sendiko.easycompose.ui.screens.WelcomeScreen
 import com.sendiko.easycompose.ui.theme.EasyComposeTheme
 
 class MainActivity : ComponentActivity() {
@@ -55,7 +56,7 @@ class MainActivity : ComponentActivity() {
                             composable(
                                 route = Routes.LoginScreenRoute.route,
                                 content = {
-
+                                    LoginScreen()
                                 }
                             )
                             composable(
