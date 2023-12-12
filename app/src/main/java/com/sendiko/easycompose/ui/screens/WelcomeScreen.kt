@@ -24,6 +24,9 @@ import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.sendiko.easycompose.R
+import com.sendiko.easycompose.ui.components.ButtonType
+import com.sendiko.easycompose.ui.components.CustomButton
+import com.sendiko.easycompose.ui.theme.DarkBlue
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -55,30 +58,22 @@ fun WelcomeScreen(
                             .fillMaxWidth()
                             .weight(1f)
                     )
-                    Button(
+                    CustomButton(
                         onClick = {
                                   onNavigate(Routes.RegisterScreenRoute.route)
                         },
-                        colors = ButtonDefaults.buttonColors(
-                            containerColor = Color(0xFF203FAD),
-                            contentColor = Color.White
-                        ),
-                        modifier = Modifier.fillMaxWidth(),
-                        content = {
-                            Text(text = "Daftar", fontSize = 16.sp)
-                        }
+                        color = DarkBlue,
+                        text = "Daftar"
                     )
                     Spacer(modifier = Modifier.height(8.dp))
-                    TextButton(
+                    CustomButton(
                         onClick = {
-                                  onNavigate(Routes.LoginScreenRoute.route)
-                        },
-                        content = {
-                            Text(
-                                text = "Have an account? Login here!",
-                                textDecoration = TextDecoration.Underline,
-                            )
-                        }
+                            onNavigate(Routes.LoginScreenRoute.route)
+                                  },
+                        color = Color.Transparent,
+                        text = "Have an account? Login!",
+                        buttonType = ButtonType.TextButton,
+                        textDecoration = TextDecoration.Underline,
                     )
                 }
             }

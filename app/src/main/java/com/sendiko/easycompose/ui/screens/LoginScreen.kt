@@ -25,7 +25,9 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.sendiko.easycompose.R
+import com.sendiko.easycompose.ui.components.CustomButton
 import com.sendiko.easycompose.ui.components.CustomTextField
+import com.sendiko.easycompose.ui.theme.LightBlue
 import com.stevdzasan.messagebar.ContentWithMessageBar
 import com.stevdzasan.messagebar.rememberMessageBarState
 
@@ -50,7 +52,9 @@ fun LoginScreen() {
                         fontWeight = FontWeight.Bold
                     )
                     Box(
-                        modifier = Modifier.fillMaxSize().padding(horizontal = 32.dp),
+                        modifier = Modifier
+                            .fillMaxSize()
+                            .padding(horizontal = 32.dp),
                         contentAlignment = Alignment.Center,
                         content = {
                             ElevatedCard {
@@ -58,9 +62,16 @@ fun LoginScreen() {
                                     modifier = Modifier.padding(16.dp),
                                     horizontalAlignment = Alignment.CenterHorizontally,
                                     content = {
-                                        Text(text = "Masuk", modifier = Modifier.fillMaxWidth())
-                                        Spacer(modifier = Modifier.height(8.dp))
+                                        Text(
+                                            text = "Masuk ke akun anda",
+                                            modifier = Modifier.fillMaxWidth(),
+                                            fontSize = 20.sp,
+                                            fontWeight = FontWeight.Bold
+                                        )
+                                        Spacer(modifier = Modifier.height(16.dp))
                                         CustomTextField(
+                                            modifier = Modifier.fillMaxWidth(),
+                                            hint = "Email",
                                             value = "",
                                             onValueChange = {
 
@@ -80,6 +91,8 @@ fun LoginScreen() {
                                         )
                                         Spacer(modifier = Modifier.height(8.dp))
                                         CustomTextField(
+                                            modifier = Modifier.fillMaxWidth(),
+                                            hint = "Password",
                                             value = "",
                                             onValueChange = {},
                                             leadingIcon = Icons.Default.Person,
@@ -96,11 +109,10 @@ fun LoginScreen() {
                                             }
                                         )
                                         Spacer(modifier = Modifier.height(16.dp))
-                                        Button(
+                                        CustomButton(
                                             onClick = { /*TODO*/ },
-                                            content = {
-                                                Text(text = "Masuk")
-                                            }
+                                            color = LightBlue,
+                                            text = "Masuk"
                                         )
                                     }
                                 )
