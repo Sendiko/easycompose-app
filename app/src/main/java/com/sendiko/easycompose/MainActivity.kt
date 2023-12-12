@@ -15,6 +15,7 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.sendiko.easycompose.ui.screens.LoginScreen
+import com.sendiko.easycompose.ui.screens.RegisterScreen
 import com.sendiko.easycompose.ui.screens.Routes
 import com.sendiko.easycompose.ui.screens.SplashScreen
 import com.sendiko.easycompose.ui.screens.WelcomeScreen
@@ -62,7 +63,7 @@ class MainActivity : ComponentActivity() {
                             composable(
                                 route = Routes.RegisterScreenRoute.route,
                                 content = {
-
+                                    RegisterScreen()
                                 }
                             )
                         }
